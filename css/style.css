@@ -25,7 +25,7 @@ body
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.33);
 
     display: grid;
-    grid-template-columns: minmax(10px, 1fr) minmax(10px, 6fr);
+    grid-template-columns: minmax(10px, 1fr) minmax(10px, 5fr);
     grid-template-rows: min-content 1fr min-content;
     gap: 1px;
 }
@@ -50,6 +50,8 @@ body
 .add-book-section
 {
     background-color: #53138865;
+    display: flex;
+    flex-direction: column;
 }
 .add-book-section button
 {
@@ -70,6 +72,24 @@ body
 {
     filter: brightness(80%);
     box-shadow: none;
+}
+.add-book-section .form-popup
+{
+    display: none;
+}
+.add-book-section .form-popup .form-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+.add-book-section input
+{
+    border-radius: 500px;
+    border: none;
+    width: 80%;
+    padding: 0.5rem;
 }
 
 .library-content

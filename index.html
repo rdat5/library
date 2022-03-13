@@ -15,6 +15,28 @@
         </header>
         <div class="add-book-section">
             <button class="add-book-btn">Add a Book</button>
+            <div class="form-popup" id="myForm">
+                <button class="cancel-btn">Cancel</button>
+                <form class="form-container">
+                    <h3>Add a book:</h3>
+                    <label for="title">Title</label>
+                    <input type="text" placeholder="The Grapes of Wrath" 
+                            name="title" required>
+                    
+                    <label for="author">Author</label>
+                    <input type="text" placeholder="John Steinbeck" 
+                            name="author" required>
+                    
+                    <label for="pages">Pages</label>
+                    <input type="number" placeholder=464 
+                            name="pages" required>
+                    
+                    <label for="haveRead">Have you read it?</label>
+                    <input type="checkbox" name="haveRead" id="haveRead">
+                    
+                    <input type="submit" class="submit-btn">
+                </form>
+            </div>
         </div>
         <main class="library-content">
             <div class="books">

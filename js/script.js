@@ -16,6 +16,9 @@ let myLibrary =[];
 
 const bookContainer = document.querySelector('.books');
 const addBookBtn = document.querySelector('.add-book-btn');
+const cancelBtn = document.querySelector('.cancel-btn');
+const formPopUp = document.querySelector('.form-popup');
+const bookForm = document.querySelector('.form-container');
 
 function getCardFromBook(book, id)
 {
@@ -103,4 +106,32 @@ function onRMBtnClick(id)
     displayBooks();
 }
 
+addBookBtn.addEventListener("click", () =>
+{
+    formPopUp.style.display = "block";
+    addBookBtn.style.display = "none";
+});
+
+cancelBtn.addEventListener("click", () =>
+{
+    addBookBtn.style.display = "block";
+    formPopUp.style.display = "none";
+});
+
+bookForm.addEventListener("submit", function(event)
+{
+    event.preventDefault();
+    let bookData = new FormData(bookForm);
+    
+    let submitTitle = bookData.get('title');
+    let submitAuthor = bookData.get('author');
+    let submitPages = bookData.get('pages');
+    let submitRead = bookData.get('haveRead');
+
+    myLibrary.push(new Book(submitTitle, submitAuthor, submitPages, 
+                submitRead));
+    
+    bookForm.reset();
+    displayBooks();
+});
 displayBooks();
