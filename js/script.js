@@ -13,8 +13,6 @@ function Book(title, author, pages, haveRead)
 }
 
 let myLibrary =[];
-// let testBook = new Book("Bepis", "Bippi", 44, false);
-// let testBook2 = new Book("Argh", "Ugh", 99, true);
 
 const bookContainer = document.querySelector('.books');
 const addBookBtn = document.querySelector('.add-book-btn');
