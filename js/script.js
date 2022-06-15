@@ -1,14 +1,13 @@
 // script.js
 
-function Book(title, author, pages, haveRead)
+class Book
 {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.haveRead = haveRead;
-    this.getInfo = function()
+    constructor(title, author, pages, haveRead)
     {
-        return `title: ${title}, author: ${author}, pages: ${pages}, haveRead: ${haveRead}`;
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.haveRead = haveRead;
     }
 }
 
